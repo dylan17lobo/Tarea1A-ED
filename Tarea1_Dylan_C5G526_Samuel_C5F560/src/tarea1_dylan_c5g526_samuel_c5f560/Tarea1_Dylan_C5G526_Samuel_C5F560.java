@@ -46,7 +46,7 @@ public class Tarea1_Dylan_C5G526_Samuel_C5F560 {
 
         // e. Eliminar un elemento (remove)
         String eliminado = inventario.remove("SSD-04");
-        System.out.println("e. (remove): Se eliminó la clave 'SSD-04' (Valor: " + eliminado + ")");
+        System.out.println("e. (remove): Se elimino la clave 'SSD-04' (Valor: " + eliminado + ")");
 
         // f. Obtener conjunto de llaves (keys)
         // Nota: El método keys() de la clase tradicional Hashtable retorna una Enumeration
