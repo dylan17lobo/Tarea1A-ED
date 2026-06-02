@@ -14,7 +14,7 @@ public class Tarea1_Dylan_C5G526_Samuel_C5F560 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        // TODO code application logic here
+        System.out.println("ESooo");
     }
     
 }
