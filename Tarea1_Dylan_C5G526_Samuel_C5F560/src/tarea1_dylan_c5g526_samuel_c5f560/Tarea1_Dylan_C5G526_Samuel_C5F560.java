@@ -18,7 +18,6 @@ public class Tarea1_Dylan_C5G526_Samuel_C5F560 {
      */
     public static void main(String[] args) {
         Hashtable<String, String> inventario = new Hashtable<>();
-        System.err.println("AAAAA");
 
         System.out.println("=== 1. DESARROLLO DE METODOS DE HASHTABLE ===\n");
 
