@@ -19,55 +19,56 @@ public class Tarea1_Dylan_C5G526_Samuel_C5F560 {
     public static void main(String[] args) {
         Hashtable<String, String> inventario = new Hashtable<>();
 
-        
-        System.out.println("=== 1. DESARROLLO DE METODOS DE HASHTABLE ===\n");
 
-        // a. Insertar o modificar un elemento (put)
+        // a. Insert
         inventario.put("GPU-01", "NVIDIA RTX 4070");
         inventario.put("CPU-02", "AMD Ryzen 7 7800X3D");
         inventario.put("RAM-03", "Corsair Vengeance 32GB DDR5");
         inventario.put("SSD-04", "Samsung 990 Pro 2TB");
-        // Modificación usando el mismo put
-        inventario.put("GPU-01", "NVIDIA RTX 4070 Ti Super"); 
-        System.out.println("a. (put): Elementos insertados y modificado 'GPU-01'.");
+        System.out.println();
 
-        // b. Obtener un elemento (get)
+        // b.get
         String componente = inventario.get("CPU-02");
-        System.out.println("b. (get): El elemento con clave 'CPU-02' es: " + componente);
+        System.out.println("El elemento con clave CPU-02 es:" + componente);
+        System.out.println();
 
-        // c. Validar si existe un elemento (contains)
-        // Nota: contains() busca por VALOR en la tabla
+        // c.contains
         boolean existeValor = inventario.contains("Samsung 990 Pro 2TB");
-        System.out.println("c. (contains): Existe el valor 'Samsung 990 Pro 2TB'?: " + existeValor);
+        System.out.println("Existe el valor Samsung 990 Pro 2TB: " + existeValor);
+        System.out.println();
 
-        // d. Validar si existe una clave (containsKey)
+        // d.containsKey
         boolean existeClave = inventario.containsKey("RAM-03");
-        System.out.println("d. (containsKey): Existe la clave 'RAM-03'?: " + existeClave);
+        System.out.println("Existe la clave RAM-03: " + existeClave);
+        System.out.println();
 
-        // e. Eliminar un elemento (remove)
+        // e.remove
         String eliminado = inventario.remove("SSD-04");
-        System.out.println("e. (remove): Se elimino la clave 'SSD-04' (Valor: " + eliminado + ")");
+        System.out.println("Se elimino la clave SSD-04 con el valor : " + eliminado);
+        System.out.println();
 
-        // f. Obtener conjunto de llaves (keys)
-        // Nota: El método keys() de la clase tradicional Hashtable retorna una Enumeration
-        System.out.print("f. (keys): Claves del inventario: ");
+        // f.keys
+        System.out.print("Claves del inventario: ");
         Enumeration<String> llaves = inventario.keys();
         while (llaves.hasMoreElements()) {
-            System.out.print("[" + llaves.nextElement() + "] ");
+            System.out.print(llaves.nextElement()+", ");
+        }
+        System.out.println();
+        System.out.println();
+
+        // g.values
+        System.out.println("Values: " + inventario.values());
+        System.out.println();
+
+        // h.entrySet, getKey y getValue
+        System.out.println("Recorrido con el entrySet:");
+        for (Map.Entry<String, String> registro : inventario.entrySet()) {
+            System.out.println("  Clave:  " + registro.getKey() + " | Valor: " + registro.getValue());
         }
         System.out.println();
 
-        // g. Obtener conjunto de valores (values)
-        System.out.println("g. (values): Conjunto de valores actuales: " + inventario.values());
-
-        // h. Recorrer los objetos (entrySet) en un ciclo para mostrar la llave (getKey) y el valor (getValue)
-        System.out.println("h. (entrySet): Recorrido detallado de la coleccion:");
-        for (Map.Entry<String, String> registro : inventario.entrySet()) {
-            System.out.println("   -> Clave [ID]: " + registro.getKey() + " | Valor [Componente]: " + registro.getValue());
-        }
-
         // i. Imprimir la colección (toString)
-        System.out.println("\ni. (toString): Representacion textual completa de la HashTable:");
+        System.out.println("\nToString de la hastable");
         System.out.println(inventario.toString());
     }
     
